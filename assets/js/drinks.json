@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Iced Americano",
+    "image": "img/iced-americano.png",
+    "price": "$10.25",
+    "description": "An iced Americano is a combination of espresso shots and cold water, poured over ice. This results in a bold, intense taste, with hints of bitterness",
+    "type": "cold"
+  },
+  {
+    "name": "Iced Cappuccino",
+    "image": "img/iced-cappuccino.png",
+    "price": "$12.50",
+    "description": "A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma",
+    "type": "cold"
+  },
+  {
+    "name": "Iced Espresso",
+    "image": "img/iced-espresso.png",
+    "price": "$14.25",
+    "description": "When hand-pulled Espresso Forte blend is poured over ice, the result is a bold and refreshing drink with notes of caramel and citrus zest.",
+    "type": "cold"
+  },
+  {
+    "name": "Iced Latte",
+    "image": "img/iced-latte.png",
+    "price": "$11.50",
+    "description": "An iced latte is a chilled coffee beverage that's made by mixing espresso with chilled milk, simple syrup, and ice cubes",
+    "type": "cold"
+  },
+
+  {
+    "name": "Hot Americano",
+    "image": "img/hot-americano.png",
+    "price": "$8.50",
+    "description": "Freshly pulled shots of espresso combined with hot water.",
+    "type": "hot"
+  },
+  {
+    "name": "Hot Cappuccino",
+    "image": "img/hot-cappuccino.png",
+    "price": "$9.50",
+    "description": "A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma.",
+    "type": "hot",
+
+  },
+  {
+    "name": "Hot Espresso",
+    "image": "img/hot-espresso.png",
+    "price": "$7.50",
+    "description": "The classic latte features a shot of espresso, steamed milk, and a thin layer of foam on top.",
+    "type": "hot"
+  },
+  {
+    "name": "Hot Latte",
+    "image": "img/hot-latte.png",
+    "price": "$6.50",
+    "description": "Made with steamed, frothy milk, blended with our rich, freshly ground and brewed espresso. Our Latte has a layer of foam and is the perfect balance of creamy and smooth to get you goin'.",
+    "type": "hot"
+
+  },
+  {
+
+    "name": "Strawberry Smoothie",
+    "image": "img/smoothie-1.png",
+    "price": "$12.50",
+    "description": "As one of our most beloved smoothies, the Strawberry Smoothie is an instant classic—sweet, creamy, and nostalgic.",
+    "type": "juice"
+  },
+  {
+    "name": "Very Berry Smoothie",
+    "image": "mg/smoothie-2.png",
+    "price": "$14.50",
+    "description": "This delicious smoothie is rich in antioxidants, vitamins, potassium, fibre and ALL THE BERRIES. Made with blueberries, raspberries, strawberry, cranberry and yogurt.",
+    "type": "juice"
+
+},
+  {
+    "name": "Pineapple Smoothie",
+    "image": "img/smoothie-3.png",
+    "price": "$16.50",
+    "description": "This smoothie will stop you in your tracks — it's that fresh. Creamy, delicious and made with pineapples, bananas, strawberries and vanilla frozen yogurt..",
+    "type": "juice"
+  },
+  {
+    "name": "Spinach Smoothie",
+    "image": "img/smoothie-4.png",
+    "price": "$18.50",
+    "description": "Don't let the colour scare you, this nutrient-rich smoothie is loaded with vitamins and tastes fruitier than it looks",
+    "type": "juice"
+
+  },
+  {
+    "name": "Lemonade",
+    "image": "img/special-01.jpg",
+    "price": "$18.50",
+    "description": "Quench your thirst with our delicious lemonade menu options. From classic flavors to unique twists, explore our top ideas to create the perfect summer drink",
+    "type": "special"
+  },
+  {
+    "name": "Croissants",
+    "image": "img/special-02.jpg",
+    "price": "$18.50",
+    "description": "Our signature laminated croissant dough shaped into squares, filled with a rich, delicious cream cheese filling and baked to perfection",
+    "type": "special"
+  },
+  {
+    "name": "Hamburger",
+    "image": "img/special-03.jpg",
+    "price": "$18.50",
+    "description": "Tasty, delicious, and has me craving more on the first bite.” to “Juicy, mouthwatering, tasty, and everything you'd ever want to savor",
+    "type": "special"
+  },
+  {
+    "name": "Cookies",
+    "image": "img/special-04.jpg",
+    "price": "$18.50",
+    "description": "Made with fresh strawberries, these strawberry cookies are a wonderful summertime treat",
+    "type": "special"
+  },
+  {
+    "name": "Iced tea",
+    "image": "img/special-05.jpg",
+    "price": "$18.50",
+    "description": "Our iced tea recipes mix fresh ingredients with the Southern classic for a tall glass of relaxation",
+    "type": "special"
+  },
+  {
+    "name": "Sandwiches",
+    "image": "img/special-06.jpg",
+    "price": "$18.50",
+    "description": "There's something about a really well made sandwich. Whether it's hot, cold, vegetarian or Big & Bold",
+    "type": "special"
+  }
+
+
+]
