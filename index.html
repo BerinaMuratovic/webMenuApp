@@ -1,473 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wave Cafe HTML Template by Tooplate</title>
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
-    <link rel="stylesheet" href="css/tooplate-wave-cafe.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wave Cafe HTML Template by Tooplate</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+  <link rel="stylesheet" href="/assets/css/tooplate-wave-cafe.css">
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/jquery.spapp.min.js"></script>
+  <script src="./assets/js/custom.js"></script>
 
 </head>
 <body>
-  <div class="tm-container">
-    <div class="tm-row">
-      <!-- Site Header -->
-      <div class="tm-left">
-        <div class="tm-left-inner">
-          <div class="tm-site-header">
-            <i class="fas fa-coffee fa-3x tm-site-logo"></i>
-            <h1 class="tm-site-name">Wave Cafe</h1>
-          </div>
-          <nav class="tm-site-nav">
-            <ul class="tm-site-nav-ul">
-              <li class="tm-page-nav-item">
-                <a href="#drink" class="tm-page-link active">
-                  <i class="fas fa-mug-hot tm-page-link-icon"></i>
-                  <span>Drink Menu</span>
-                </a>
-              </li>
-              <li class="tm-page-nav-item">
-                <a href="#about" class="tm-page-link">
-                  <i class="fas fa-users tm-page-link-icon"></i>
-                  <span>About Us</span>
-                </a>
-              </li>
-              <li class="tm-page-nav-item">
-                <a href="#special" class="tm-page-link">
-                  <i class="fas fa-glass-martini tm-page-link-icon"></i>
-                  <span>Special Items</span>
-                </a>
-              </li>
-              <li class="tm-page-nav-item">
-                <a href="#reservations" class="tm-page-link">
-                  <i class="fas fa-comments tm-page-link-icon"></i>
-                  <span>Reservations</span>
-                </a>
-              </li>
-
-            </ul>
-          </nav>
-        </div>        
+<div class="tm-container">
+  <div class="tm-row">
+    <!-- Site Header -->
+    <div class="tm-left">
+      <div class="tm-left-inner">
+        <div class="tm-site-header">
+          <i class="fas fa-coffee fa-3x tm-site-logo"></i>
+          <h1 class="tm-site-name">Wave Cafe</h1>
+        </div>
+        <nav class="tm-site-nav" role="navigation">
+          <ul class="tm-site-nav-ul">
+            <li class="tm-page-nav-item">
+              <a href="#view_home" class="tm-page-link active">
+                <i class="fas fa-mug-hot tm-page-link-icon"></i>
+                <span>Drink Menu</span>
+              </a>
+            </li>
+            <li class="tm-page-nav-item">
+              <a href="#view_about" class="tm-page-link">
+                <i class="fas fa-users tm-page-link-icon"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+            <li class="tm-page-nav-item">
+              <a href="#view_special" class="tm-page-link">
+                <i class="fas fa-glass-martini tm-page-link-icon"></i>
+                <span>Special Items</span>
+              </a>
+            </li>
+            <li class="tm-page-nav-item">
+              <a href="#view_reservations" class="tm-page-link">
+                <i class="fas fa-comments tm-page-link-icon"></i>
+                <span>Reservations</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="tm-right">
-        <main class="tm-main">
-          <div id="drink" class="tm-page-content">
-            <!-- Drink Menu Page -->
-            <nav class="tm-black-bg tm-drinks-nav">
-              <ul>
-                <li>
-                  <a href="#" class="tm-tab-link active" data-id="cold">Iced Coffee</a>
-                </li>
-                <li>
-                  <a href="#" class="tm-tab-link" data-id="hot">Hot Coffee</a>
-                </li>
-                <li>
-                  <a href="#" class="tm-tab-link" data-id="juice">Fruit Juice</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div id="cold" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">          
-                  <img src="img/iced-americano.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Americano<span class="tm-list-item-price">$10.25</span></h3>
-                    <p class="tm-list-item-description">An iced Americano is a combination of espresso shots and cold water, poured over ice. This results in a bold, intense taste, with hints of bitterness</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/iced-cappuccino.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Cappuccino<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/iced-espresso.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Espresso<span class="tm-list-item-price">$14.25</span></h3>
-                    <p class="tm-list-item-description">When hand-pulled Espresso Forte blend is poured over ice, the result is a bold and refreshing drink with notes of caramel and citrus zest.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/iced-latte.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Latte<span class="tm-list-item-price">$11.50</span></h3>
-                    <p class="tm-list-item-description">An iced latte is a chilled coffee beverage that's made by mixing espresso with chilled milk, simple syrup, and ice cubes</a> if you have anything to ask.</p>
-                  </div>
-                </div> 
-                                       
-              </div>
-            </div> 
-
-            <div id="hot" class="tm-tab-content">
-              <div class="tm-list">
-              
-                <div class="tm-list-item">          
-                  <img src="img/hot-americano.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Americano<span class="tm-list-item-price">$8.50</span></h3>
-                    <p class="tm-list-item-description">Freshly pulled shots of espresso combined with hot water.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/hot-cappuccino.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Cappuccino<span class="tm-list-item-price">$9.50</span></h3>
-                    <p class="tm-list-item-description">A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/hot-espresso.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Espresso<span class="tm-list-item-price">$7.50</span></h3>
-                    <p class="tm-list-item-description">The classic latte features a shot of espresso, steamed milk, and a thin layer of foam on top.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/hot-latte.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Latte<span class="tm-list-item-price">$6.50</span></h3>
-                    <p class="tm-list-item-description">Made with steamed, frothy milk, blended with our rich, freshly ground and brewed espresso. Our Latte has a layer of foam and is the perfect balance of creamy and smooth to get you goin'.</p>
-                  </div>
-                </div>
-                         
-              </div>
-            </div>
-
-            <div id="juice" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">          
-                  <img src="img/smoothie-1.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Strawberry Smoothie<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">As one of our most beloved smoothies, the Strawberry Smoothie is an instant classic—sweet, creamy, and nostalgic</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/smoothie-2.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Very Berry Smoothie<span class="tm-list-item-price">$14.50</span></h3>
-                    <p class="tm-list-item-description">This delicious smoothie is rich in antioxidants, vitamins, potassium, fibre and ALL THE BERRIES. Made with blueberries, raspberries, strawberry, cranberry and yogurt</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/smoothie-3.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Pineapple Smoothie<span class="tm-list-item-price">$16.50</span></h3>
-                    <p class="tm-list-item-description">This smoothie will stop you in your tracks — it's that fresh. Creamy, delicious and made with pineapples, bananas, strawberries and vanilla frozen yogurt.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">          
-                  <img src="img/smoothie-4.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Spinach Smoothie<span class="tm-list-item-price">$18.50</span></h3>
-                    <p class="tm-list-item-description">Don't let the colour scare you, this nutrient-rich smoothie is loaded with vitamins and tastes fruitier than it looks.</p>
-                  </div>
-                </div>              
-              </div>
-            </div>
-            <!-- end Drink Menu Page -->
-          </div>
-
-          <!-- About Us Page -->
-          <div id="about" class="tm-page-content">
-            <div class="tm-black-bg tm-mb-20 tm-about-box-1">              
-              <h2 class="tm-text-primary tm-about-header">About Wave Cafe</h2>
-              <div class="tm-list-item tm-list-item-2">                
-                <img src="img/about-1.png" alt="Image" class="tm-list-item-img tm-list-item-img-big">
-                <div class="tm-list-item-text-2">
-                  <p>
-                    Welcome to Wave Café, where the soothing rhythm of the ocean meets the aromatic symphony of freshly brewed coffee. Immerse yourself in a coastal-inspired haven, where the ambience mirrors the gentle ebb and flow of waves </p>
-                  <p>Indulge in our artisanal coffee blends, crafted with precision and passion, while savoring delectable treats that ride the tide between indulgence and elegance.</p>
-                </div>                
-              </div>
-            </div>
-            <div class="tm-black-bg tm-mb-20 tm-about-box-2">              
-              <div class="tm-list-item tm-list-item-2">                
-                <div class="tm-list-item-text-2">
-                  <h2 class="tm-text-primary">How we began</h2>
-                  <p>
-                    Wave Café began as a heartfelt vision to create a coastal sanctuary in the heart of the city. Inspired by the founder's love for the ocean's tranquility and the communal spirit of seaside cafes, the idea took shape.</p>
-                </div>                
-                <img src="img/about-2.png" alt="Image" class="tm-list-item-img tm-list-item-img-big tm-img-right">                
-              </div>
-              <p>The journey started with a desire to offer more than just coffee – it was about curating an experience that seamlessly blended the calming influence of waves with the rich warmth of a welcoming cafe.</p>
-            </div>
-          </div>
-          <!-- end About Us Page -->
-
-          <!-- Special Items Page -->
-          <div id="special" class="tm-page-content">
-            <div class="tm-special-items">
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-01.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Lemonade</h2>
-                  <p class="tm-special-item-text">Quench your thirst with our delicious lemonade menu options. From classic flavors to unique twists, explore our top ideas to create the perfect summer drink </p>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-02.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Croissants</h2>
-                  <p class="tm-special-item-text">Our signature laminated croissant dough shaped into squares, filled with a rich, delicious cream cheese filling and baked to perfection</p>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-03.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Hamburger</h2>
-                  <p class="tm-special-item-text">“Tasty, delicious, and has me craving more on the first bite.” to “Juicy, mouthwatering, tasty, and everything you'd ever want to savor.”.</p>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-04.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Cookies</h2>
-                  <p class="tm-special-item-text">Made with fresh strawberries, these strawberry cookies are a wonderful summertime treat.</p>
-                </div>
-              </div>      
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-05.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Iced tea</h2>
-                  <p class="tm-special-item-text">Our iced tea recipes mix fresh ingredients with the Southern classic for a tall glass of relaxation.</p>
-                </div>
-              </div>
-              <div class="tm-black-bg tm-special-item">
-                <img src="img/special-06.jpg" alt="Image">
-                <div class="tm-special-item-description">
-                  <h2 class="tm-text-primary tm-special-item-title">Sandwiches</h2>
-                  <p class="tm-special-item-text">There's something about a really well made sandwich. Whether it's hot, cold, vegetarian or Big & Bold</p>
-                </div>
-              </div>                      
-            </div>            
-          </div>
-          <!-- end Special Items Page -->
-
-          <!-- Reservations Page -->
-          <div id="reservations" class="tm-page-content">
-
-            <div class="tm-black-bg tm-mb-20 tm-about-box-1">
-
-              <nav class="tm-site-nav">
-
-              <ul class="tm-site-nav-ul">
-
-              <li class="tm-page-nav-item">
-                <a href="#login" class="tm-page-link">
-                  <i class="fas fa-users tm-page-link-icon"></i>
-                  <span>Login</span>
-                </a>
-              </li>
-                <p>Or</p>
-
-                <li class="tm-page-nav-item">
-                  <a href="#register" class="tm-page-link">
-                    <i class="fas fa-users tm-page-link-icon"></i>
-                    <span>Register</span>
-                  </a>
-                </li>
-
-              </ul>
-              </nav>
-
-
-
-            </div>
-          </div>
-
-          <!-- end Reservations Page -->
-          <!--login-->
-          <div id="login" class="tm-page-content">
-            <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Login</h2>
-
-            </div>
-            <div class="tm-black-bg tm-contact-form-container tm-align-right">
-
-
-              <div class="tm-form-group">
-                <input type="email" name="email" class="tm-form-control" placeholder="Email" required="" />
-              </div>
-              <div class="tm-form-group">
-                <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-              </div>
-              <div class="tm-form-group">
-                <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-              </div>
-
-              <div>
-                <form>
-                <button type="submit" class="tm-btn-primary tm-align-right" formaction="routes/reservations.html">
-                  Submit
-                </button>
-                </form>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- end login Page -->
-
-          <!-- registration page -->
-
-          <div id="register" class="tm-page-content">
-            <div class="tm-black-bg tm-contact-text-container">
-              <h2 class="tm-text-primary">Register</h2>
-
-            </div>
-            <div class="tm-black-bg tm-contact-form-container tm-align-right">
-
-              <div class="tm-form-group">
-                <input type="text" name="name" class="tm-form-control" placeholder="Name" required="" />
-              </div>
-              <div class="tm-form-group">
-                <input type="email" name="email" class="tm-form-control" placeholder="Email" required="" />
-              </div>
-              <div class="tm-form-group">
-                <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-              </div>
-              <div class="tm-form-group">
-                <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-              </div>
-
-              <div>
-                <form>
-                <button type="submit" class="tm-btn-primary tm-align-right" formaction="routes/reservations.html">
-                  Submit
-                </button>
-                </form>
-              </div>
-
-            </div>
-          </div>
-
-          <!--end registration page-->
-
-          <!-- reservation-->
-
-          <!--end reservaton-->
-        </main>
-      </div>    
     </div>
-    
+    <div class="tm-right">
+      <main class="tm-main" id="spapp" role="main">
+        <section id="view_home" data-load="home.html"></section>
+        <section id="view_about" data-load="about.html"></section>
+        <section id="view_special" data-load="special-items.html"></section>
+        <section id="view_reservations" data-load="reservations.html"></section>
+      </main>
+    </div>
   </div>
-    
-  <!-- Background video -->
-  <div class="tm-video-wrapper">
-      <i id="tm-video-control-button" class="fas fa-pause"></i>
-      <video autoplay muted loop id="tm-video">
-          <source src="video/wave-cafe-video-bg.mp4" type="video/mp4">
-      </video>
-  </div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>    
-  <script>
+</div>
 
-    function setVideoSize() {
-      const vidWidth = 1920;
-      const vidHeight = 1080;
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-      const tempVidWidth = windowHeight * vidWidth / vidHeight;
-      const tempVidHeight = windowWidth * vidHeight / vidWidth;
-      const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
-      const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
-      const tmVideo = $('#tm-video');
+<!-- Background video -->
+<div class="tm-video-wrapper">
+  <i id="tm-video-control-button" class="fas fa-pause"></i>
+  <video autoplay muted loop id="tm-video">
+    <source src="video/wave-cafe-video-bg.mp4" type="video/mp4">
+  </video>
+</div>
 
-      tmVideo.css('width', newVidWidth);
-      tmVideo.css('height', newVidHeight);
+<script>
+
+  function setVideoSize() {
+    const vidWidth = 1920;
+    const vidHeight = 1080;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const tempVidWidth = windowHeight * vidWidth / vidHeight;
+    const tempVidHeight = windowWidth * vidHeight / vidWidth;
+    const newVidWidth = tempVidWidth > windowWidth ? tempVidWidth : windowWidth;
+    const newVidHeight = tempVidHeight > windowHeight ? tempVidHeight : windowHeight;
+    const tmVideo = $('#tm-video');
+
+    tmVideo.css('width', newVidWidth);
+    tmVideo.css('height', newVidHeight);
+  }
+
+  function openTab(evt, id) {
+    $('.tm-tab-content').hide();
+    $('#' + id).show();
+    $('.tm-tab-link').removeClass('active');
+    $(evt.currentTarget).addClass('active');
+  }
+
+  function initPage() {
+    let pageId = location.hash;
+
+    if(pageId) {
+      highlightMenu($(`.tm-page-link[href^="${pageId}"]`));
+      showPage($(pageId));
     }
+    else {
+      pageId = $('.tm-page-link.active').attr('href');
+      showPage($(pageId));
+    }
+  }
 
-    function openTab(evt, id) {
-      $('.tm-tab-content').hide();
-      $('#' + id).show();
-      $('.tm-tab-link').removeClass('active');
-      $(evt.currentTarget).addClass('active');
-    }    
+  function highlightMenu(menuItem) {
+    $('.tm-page-link').removeClass('active');
+    menuItem.addClass('active');
+  }
 
-    function initPage() {
-      let pageId = location.hash;
+  function showPage(page) {
+    $('.tm-page-content').hide();
+    page.show();
+  }
 
-      if(pageId) {
-        highlightMenu($(`.tm-page-link[href^="${pageId}"]`)); 
-        showPage($(pageId));
+  $(document).ready(function(){
+
+    /***************** Pages *****************/
+
+    initPage();
+
+    $('.tm-page-link').click(function(event) {
+
+      if(window.innerWidth > 991) {
+        event.preventDefault();
       }
-      else {
-        pageId = $('.tm-page-link.active').attr('href');
-        showPage($(pageId));
-      }
-    }
 
-    function highlightMenu(menuItem) {
-      $('.tm-page-link').removeClass('active');
-      menuItem.addClass('active');
-    }
-
-    function showPage(page) {
-      $('.tm-page-content').hide();
-      page.show();
-    }
-
-    $(document).ready(function(){
-
-      /***************** Pages *****************/
-
-      initPage();
-
-      $('.tm-page-link').click(function(event) {
-        
-        if(window.innerWidth > 991) {
-          event.preventDefault();
-        }
-
-        highlightMenu($(event.currentTarget));
-        showPage($(event.currentTarget.hash));
-      });
-
-      
-      /***************** Tabs *******************/
-
-      $('.tm-tab-link').on('click', e => {
-        e.preventDefault(); 
-        openTab(e, $(e.target).data('id'));
-      });
-
-      $('.tm-tab-link.active').click(); // Open default tab
-
-
-      /************** Video background *********/
-
-      setVideoSize();
-
-      // Set video background size based on window size
-      let timeout;
-      window.onresize = function(){
-        clearTimeout(timeout);
-        timeout = setTimeout(setVideoSize, 100);
-      };
-
-      // Play/Pause button for video background      
-      const btn = $("#tm-video-control-button");
-
-      btn.on("click", function(e) {
-        const video = document.getElementById("tm-video");
-        $(this).removeClass();
-
-        if (video.paused) {
-          video.play();
-          $(this).addClass("fas fa-pause");
-        } else {
-          video.pause();
-          $(this).addClass("fas fa-play");
-        }
-      });
+      highlightMenu($(event.currentTarget));
+      showPage($(event.currentTarget.hash));
     });
-      
-  </script>
+
+
+    /***************** Tabs *******************/
+
+    $('.tm-tab-link').on('click', e => {
+      e.preventDefault();
+      openTab(e, $(e.target).data('id'));
+    });
+
+    $('.tm-tab-link.active').click(); // Open default tab
+
+
+    /************** Video background *********/
+
+    setVideoSize();
+
+    // Set video background size based on window size
+    let timeout;
+    window.onresize = function(){
+      clearTimeout(timeout);
+      timeout = setTimeout(setVideoSize, 100);
+    };
+
+    // Play/Pause button for video background
+    const btn = $("#tm-video-control-button");
+
+    btn.on("click", function(e) {
+      const video = document.getElementById("tm-video");
+      $(this).removeClass();
+
+      if (video.paused) {
+        video.play();
+        $(this).addClass("fas fa-pause");
+      } else {
+        video.pause();
+        $(this).addClass("fas fa-play");
+      }
+    });
+  });
+
+</script>
 </body>
 </html>
