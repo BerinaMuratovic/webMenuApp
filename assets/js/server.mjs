@@ -16,11 +16,11 @@ export function getDrinksByType(type) {
     }).catch(err => console.error('Error fetching drinks:', err));
 }
 
-export function getSpecialItems() {
+window.getSpecialItems = function() {
     return $.get('assets/js/special-items.json', (data) => {
         let output = ''
         data.forEach(item => {
-            output += `<div class="tm-black-bg tm-special-item">
+            output += `<div class="tm-black-bg tm-special-item" onclick="getSpecialItem('${item.id}')">
             <img src="${item.image}" alt="Image">
             <div class="tm-special-item-description">
                 <h2 class="tm-text-primary tm-special-item-title">${item.name}</h2>
@@ -31,3 +31,21 @@ export function getSpecialItems() {
         document.getElementById('special-items').innerHTML = output;
     }).catch(err => console.error('Error fetching special items:', err));
 }
+
+
+window.getSpecialItem = function(id) {
+    return $.get('assets/js/special-items.json', (data) => {
+        const item = data.find(item => item.id.toString() === id);
+        const output = `
+        <div class="tm-black-bg tm-single-item">
+            <img src="${item.image}" alt="Image">
+            <div class="tm-special-item-description">
+                <h2 class="tm-text-primary tm-special-item-title">${item.name}</h2>
+                <p class="tm-special-item-text">${item.description}</p>
+            </div>
+            <button onclick="getSpecialItems()">Back to Special Items</button>
+        </div>
+        `
+        document.getElementById('special-items').innerHTML = output;
+    });
+};
