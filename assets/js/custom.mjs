@@ -1,4 +1,3 @@
-import {getDrinksByType} from "./server.mjs";
 
 $(document).ready(function() {
     var app = $.spapp({

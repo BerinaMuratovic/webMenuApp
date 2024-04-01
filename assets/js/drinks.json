@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Iced Americano",
     "image": "img/iced-americano.png",
     "price": "$10.25",
@@ -7,6 +8,7 @@
     "type": "cold"
   },
   {
+    "id": 2,
     "name": "Iced Cappuccino",
     "image": "img/iced-cappuccino.png",
     "price": "$12.50",
@@ -14,6 +16,7 @@
     "type": "cold"
   },
   {
+    "id": 3,
     "name": "Iced Espresso",
     "image": "img/iced-espresso.png",
     "price": "$14.25",
@@ -21,6 +24,7 @@
     "type": "cold"
   },
   {
+    "id": 4,
     "name": "Iced Latte",
     "image": "img/iced-latte.png",
     "price": "$11.50",
@@ -29,6 +33,7 @@
   },
 
   {
+    "id": 5,
     "name": "Hot Americano",
     "image": "img/hot-americano.png",
     "price": "$8.50",
@@ -36,6 +41,7 @@
     "type": "hot"
   },
   {
+    "id": 6,
     "name": "Hot Cappuccino",
     "image": "img/hot-cappuccino.png",
     "price": "$9.50",
@@ -44,6 +50,7 @@
 
   },
   {
+    "id": 7,
     "name": "Hot Espresso",
     "image": "img/hot-espresso.png",
     "price": "$7.50",
@@ -51,6 +58,7 @@
     "type": "hot"
   },
   {
+    "id": 8,
     "name": "Hot Latte",
     "image": "img/hot-latte.png",
     "price": "$6.50",
@@ -59,7 +67,7 @@
 
   },
   {
-
+    "id": 9,
     "name": "Strawberry Smoothie",
     "image": "img/smoothie-1.png",
     "price": "$12.50",
@@ -67,14 +75,16 @@
     "type": "juice"
   },
   {
+    "id": 10,
     "name": "Very Berry Smoothie",
-    "image": "mg/smoothie-2.png",
+    "image": "img/smoothie-2.png",
     "price": "$14.50",
     "description": "This delicious smoothie is rich in antioxidants, vitamins, potassium, fibre and ALL THE BERRIES. Made with blueberries, raspberries, strawberry, cranberry and yogurt.",
     "type": "juice"
 
   },
   {
+    "id": 11,
     "name": "Pineapple Smoothie",
     "image": "img/smoothie-3.png",
     "price": "$16.50",
@@ -82,6 +92,7 @@
     "type": "juice"
   },
   {
+    "id": 12,
     "name": "Spinach Smoothie",
     "image": "img/smoothie-4.png",
     "price": "$18.50",
@@ -90,6 +101,7 @@
 
   },
   {
+    "id": 13,
     "name": "Lemonade",
     "image": "img/special-01.jpg",
     "price": "$18.50",
@@ -97,6 +109,7 @@
     "type": "special"
   },
   {
+    "id": 14,
     "name": "Croissants",
     "image": "img/special-02.jpg",
     "price": "$18.50",
@@ -104,6 +117,7 @@
     "type": "special"
   },
   {
+    "id": 15,
     "name": "Hamburger",
     "image": "img/special-03.jpg",
     "price": "$18.50",
@@ -111,6 +125,7 @@
     "type": "special"
   },
   {
+    "id": 16,
     "name": "Cookies",
     "image": "img/special-04.jpg",
     "price": "$18.50",
@@ -118,6 +133,7 @@
     "type": "special"
   },
   {
+    "id": 17,
     "name": "Iced tea",
     "image": "img/special-05.jpg",
     "price": "$18.50",
@@ -125,6 +141,7 @@
     "type": "special"
   },
   {
+    "id": 18,
     "name": "Sandwiches",
     "image": "img/special-06.jpg",
     "price": "$18.50",

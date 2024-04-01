@@ -5,24 +5,68 @@
     </div>
     <div class="tm-black-bg tm-contact-form-container tm-align-right">
 
-
-        <div class="tm-form-group">
-            <input type="email" name="email" class="tm-form-control" placeholder="Email" required="" />
-        </div>
-        <div class="tm-form-group">
-            <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-        </div>
-        <div class="tm-form-group">
-            <input type="text" name="password" class="tm-form-control" placeholder="Password" required="" />
-        </div>
+        <form id="loginForm">
+            <div class="tm-form-group">
+                <input type="email" name="email" class="tm-form-control" placeholder="Email" required="" id="email"/>
+            </div>
+            <div class="tm-form-group">
+                <input type="password" name="password" class="tm-form-control" placeholder="Password"  minlength="8" required/>
+            </div>
+        </form>
 
         <div>
-            <form>
-                <button type="submit" class="tm-btn-primary tm-align-right" formaction="routes/reservations.html">
-                    Submit
-                </button>
-            </form>
+            <button class="tm-btn-primary tm-align-right">
+                Submit
+            </button>
         </div>
 
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        // Initialize jQuery Validator
+        $('#loginForm').validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 8,
+                    maxlength: 20
+                }
+            },
+            messages: {
+                email: {
+                    required: 'Please enter your email',
+                    email: 'Please enter a valid email address'
+                },
+                password: {
+                    required: 'Please enter a password',
+                    minlength: 'Password must be at least 8 characters long',
+                    maxlength: 'Password cannot be longer than 20 characters',
+                }
+            },
+            submitHandler: function (form) {
+                try {
+                    const formData = $(form).serializeArray();
+                    const jsonData = {};
+                    formData.forEach(field => {
+                        jsonData[field.name] = field.value;
+                    });
+
+                    console.log(jsonData);
+                    // Will be implemented in milestone 3
+                } catch (error) {
+                    console.error('Error in submitHandler:', error);
+                    alert('An error occurred. Please try again later.');
+                    // Unblock UI after request is complete
+                    $.unblockUI();
+                }
+            }
+        });
+    });
+
+</script>
