@@ -10,14 +10,10 @@
   <link rel="stylesheet" href="/assets/css/spapp.css">
   <script src="./assets/js/jquery.min.js"></script>
   <script src="./assets/js/jquery.spapp.min.js"></script>
-  <script src="./assets/js/custom.js"></script>
-
-
+  <script type="module" src="assets/js/custom.mjs"></script>
+  <script type="module" src="assets/js/server.mjs"></script>
 </head>
 <body>
-
-
-
 <div class="tm-container">
   <div class="tm-row">
 
@@ -44,7 +40,7 @@
               </a>
             </li>
             <li class="tm-page-nav-item">
-              <a href="#view_special" class="tm-page-link">
+              <a id="special-item-nav-button" href="#view_special" class="tm-page-link">
                 <i class="fas fa-glass-martini tm-page-link-icon"></i>
                 <span>Special Items</span>
               </a>
@@ -96,105 +92,7 @@
             </nav>
 
             <div id="cold" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">
-                  <img src="img/iced-americano.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Americano<span class="tm-list-item-price">$10.25</span></h3>
-                    <p class="tm-list-item-description">An iced Americano is a combination of espresso shots and cold water, poured over ice. This results in a bold, intense taste, with hints of bitterness</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/iced-cappuccino.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Cappuccino<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/iced-espresso.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Espresso<span class="tm-list-item-price">$14.25</span></h3>
-                    <p class="tm-list-item-description">When hand-pulled Espresso Forte blend is poured over ice, the result is a bold and refreshing drink with notes of caramel and citrus zest.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/iced-latte.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Iced Latte<span class="tm-list-item-price">$11.50</span></h3>
-                    <p class="tm-list-item-description">An iced latte is a chilled coffee beverage that's made by mixing espresso with chilled milk, simple syrup, and ice cubes</a> if you have anything to ask.</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div id="hot" class="tm-tab-content">
-              <div class="tm-list">
-
-                <div class="tm-list-item">
-                  <img src="img/hot-americano.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Americano<span class="tm-list-item-price">$8.50</span></h3>
-                    <p class="tm-list-item-description">Freshly pulled shots of espresso combined with hot water.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/hot-cappuccino.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Cappuccino<span class="tm-list-item-price">$9.50</span></h3>
-                    <p class="tm-list-item-description">A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/hot-espresso.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Espresso<span class="tm-list-item-price">$7.50</span></h3>
-                    <p class="tm-list-item-description">The classic latte features a shot of espresso, steamed milk, and a thin layer of foam on top.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/hot-latte.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Hot Latte<span class="tm-list-item-price">$6.50</span></h3>
-                    <p class="tm-list-item-description">Made with steamed, frothy milk, blended with our rich, freshly ground and brewed espresso. Our Latte has a layer of foam and is the perfect balance of creamy and smooth to get you goin'.</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div id="juice" class="tm-tab-content">
-              <div class="tm-list">
-                <div class="tm-list-item">
-                  <img src="img/smoothie-1.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Strawberry Smoothie<span class="tm-list-item-price">$12.50</span></h3>
-                    <p class="tm-list-item-description">As one of our most beloved smoothies, the Strawberry Smoothie is an instant classic—sweet, creamy, and nostalgic</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/smoothie-2.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Very Berry Smoothie<span class="tm-list-item-price">$14.50</span></h3>
-                    <p class="tm-list-item-description">This delicious smoothie is rich in antioxidants, vitamins, potassium, fibre and ALL THE BERRIES. Made with blueberries, raspberries, strawberry, cranberry and yogurt</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/smoothie-3.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Pineapple Smoothie<span class="tm-list-item-price">$16.50</span></h3>
-                    <p class="tm-list-item-description">This smoothie will stop you in your tracks — it's that fresh. Creamy, delicious and made with pineapples, bananas, strawberries and vanilla frozen yogurt.</p>
-                  </div>
-                </div>
-                <div class="tm-list-item">
-                  <img src="img/smoothie-4.png" alt="Image" class="tm-list-item-img">
-                  <div class="tm-black-bg tm-list-item-text">
-                    <h3 class="tm-list-item-name">Spinach Smoothie<span class="tm-list-item-price">$18.50</span></h3>
-                    <p class="tm-list-item-description">Don't let the colour scare you, this nutrient-rich smoothie is loaded with vitamins and tastes fruitier than it looks.</p>
-                  </div>
-                </div>
-              </div>
+              <div id="list-of-drinks" class="tm-list"></div>
             </div>
           </div>
         </section>

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Lemonade",
+    "image": "img/special-01.jpg",
+    "price": "$10.25",
+    "description": "Quench your thirst with our delicious lemonade menu options. From classic flavors to unique twists, explore our top ideas to create the perfect summer drink"
+  },
+  {
+    "name": "Croissants",
+    "image": "img/special-02.jpg",
+    "price": "$12.25",
+    "description": "Our signature laminated croissant dough shaped into squares, filled with a rich, delicious cream cheese filling and baked to perfection"
+  },
+  {
+    "name": "Hamburger",
+    "image": "img/special-03.jpg",
+    "price": "$15.25",
+    "description": "Tasty, delicious, and has me craving more on the first bite.” to “Juicy, mouthwatering, tasty, and everything you'd ever want to savor"
+  },
+  {
+    "name": "Cookies",
+    "image": "img/special-04.jpg",
+    "price": "$10.25",
+    "description": "Made with fresh strawberries, these strawberry cookies are a wonderful summertime treat"
+  },
+  {
+    "name": "Iced tea",
+    "image": "img/special-05.jpg",
+    "price": "$6.25",
+    "description": "Our iced tea recipes mix fresh ingredients with the Southern classic for a tall glass of relaxation"
+  },
+  {
+    "name": "Sandwiches",
+    "image": "img/special-06.jpg",
+    "price": "$9.25",
+    "description": "There's something about a really well made sandwich. Whether it's hot, cold, vegetarian or Big & Bold"
+
+  }
+  ]
+

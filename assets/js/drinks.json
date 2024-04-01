@@ -40,7 +40,7 @@
     "image": "img/hot-cappuccino.png",
     "price": "$9.50",
     "description": "A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma.",
-    "type": "hot",
+    "type": "hot"
 
   },
   {
@@ -131,6 +131,4 @@
     "description": "There's something about a really well made sandwich. Whether it's hot, cold, vegetarian or Big & Bold",
     "type": "special"
   }
-
-
 ]
