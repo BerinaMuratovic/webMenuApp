@@ -2,29 +2,36 @@
 
     <div class="tm-black-bg tm-mb-20 tm-about-box-1">
 
-        <nav class="tm-site-nav">
+        <div id="reserve" class="tm-page-content">
+            <div class="tm-black-bg tm-contact-text-containr">
+                <h2 class="tm-text-primary">Reservations</h2>
 
-            <ul class="tm-site-nav-ul">
+            </div>
+            <div class="tm-black-bg tm-contact-form-container tm-align-right">
 
-                <li class="tm-page-nav-item">
-                    <a href="#login" class="tm-page-link">
-                        <i class="fas fa-users tm-page-link-icon"></i>
-                        <span>Login</span>
-                    </a>
-                </li>
-                <p>Or</p>
-
-                <li class="tm-page-nav-item">
-                    <a href="#register" class="tm-page-link">
-                        <i class="fas fa-users tm-page-link-icon"></i>
-                        <span>Register</span>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
+                <div class="tm-form-group">
+                    <input type="text" name="name" class="tm-form-control" placeholder="Name" required="" />
+                </div>
+                <div class="tm-form-group">
+                    <input type="number" name="Table" class="tm-form-control" placeholder="Table" min="1" max="15" required="" />
+                </div>
+                <div class="tm-form-group">
+                    <input type="date" name="Date" class="tm-form-control" placeholder="Date" required="" />
+                </div>
+                <div class="tm-form-group">
+                    <input type="time" name="time" class="tm-form-control" placeholder="Time" required="" />
+                </div>
 
 
+                <div>
 
+                    <button type="submit" class="tm-btn-primary tm-align-right" >
+                        Submit
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
