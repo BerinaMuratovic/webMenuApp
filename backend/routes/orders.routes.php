@@ -23,6 +23,11 @@ Flight::group('/orders', function() {
         $order_service = new OrdersService();
         $data = $order_service->getOrderById($order_id);
 
+        if (!$data) {
+            Flight::halt(404, "Table not found!");
+        }
+
+
         Flight::json(['data' => $data, 'message' => " successfull"]);
     });
 
@@ -92,7 +97,12 @@ Flight::group('/orders', function() {
         }
 
         $order_service = new OrdersService();
-        $order_service->deleteOrderById($order_id);
+        $data = $order_service->deleteOrderById($order_id);
+
+        if (!$data) {
+            Flight::halt(404, "Table not found!");
+        }
+
 
         Flight::json(['data' => NULL, 'message' => "You have successfully deleted the order"]);
     });

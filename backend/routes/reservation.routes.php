@@ -1,12 +1,13 @@
 <?php
 
 require_once __DIR__ . '/../services/reservation.service.php';
+require_once __DIR__ . '/../services/orders.service.php';
 
 Flight::group('/reservations', function() {
 
     /**
      * @OA\Get(
-     *      path="/reservation/all",
+     *      path="/reservation",
      *      tags={"reservations"},
      *      summary="Get all reservations",
      *      @OA\Response(
@@ -43,9 +44,23 @@ Flight::group('/reservations', function() {
         }
 
         $reservation_service = new ReservationService();
-        $reservation_service->getReservationById($reservation_id);
+        $reservation_data = $reservation_service->getReservationById($reservation_id);
 
-        Flight::json(['data' => NULL, 'message' => " successfull"]);
+        if (!$reservation_data) {
+            Flight::halt(404, "Reservation not found!");
+        }
+
+        $table_id = $reservation_data['table_id'];
+
+        $order_service = new OrdersService();
+
+        $order_data = $order_service->getOrderswByTableId($table_id);
+
+        if (!$order_data) {
+            Flight::halt(404, "Order not found!");
+        }
+
+        Flight::json(['order_data' => $order_data, '$reservation_data' => $reservation_data, 'message' => " successfull"]);
     });
 
     /**
@@ -93,6 +108,7 @@ Flight::group('/reservations', function() {
 
         $reservation_service = new ReservationService();
         $reservation_service->deleteReservationById($reservation_id);
+
 
         Flight::json(['data' => NULL, 'message' => "You have successfully deleted the reservation"]);
 

@@ -46,6 +46,10 @@ Flight::group('/tables', function() {
         $table_service = new TableService();
         $data = $table_service->getTableById($table_id);
 
+        if (!$data) {
+            Flight::halt(404, "Table not found!");
+        }
+
         Flight::json(['data' => $data, 'message' => "successfull"]);
     });
 

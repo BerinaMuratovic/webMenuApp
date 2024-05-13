@@ -8,6 +8,11 @@ class OrdersService {
         $this->order_dao = new OrderDao();
     }
 
+    public function getOrderswByTableId($table_id): array
+    {
+        return $this->order_dao->getOrdersByTableId($table_id);
+    }
+
     public function addOrder($addOrder)
     {
         return $this->order_dao->addOrder($addOrder);

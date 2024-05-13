@@ -45,6 +45,10 @@ Flight::group('/users', function() {
         $user_service = new UserService();
         $data = $user_service->getUserById($user_id);
 
+        if (!$data) {
+            Flight::halt(404, "Table not found!");
+        }
+
         Flight::json(['data' => $data, 'message' => "successfull"]);
     });
 
@@ -96,15 +100,10 @@ Flight::group('/users', function() {
         if($payload['username'] == NULL || $payload['email'] == NULL || $payload['password'] == NULL) {
             Flight::halt(500, "Required parameters are missing!");
         }
-        unset($payload['id']);
+
         $user_service = new UserService();
         $user = $user_service->addUser($payload);
         Flight::json(['data' => $user, 'message' => "You have successfully added the user"]);
     });
-
-
-
-
-
 
 });

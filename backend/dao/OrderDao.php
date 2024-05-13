@@ -8,6 +8,11 @@ class OrderDao extends BaseDao
         parent::__construct("orders");
     }
 
+    public function getOrdersByTableId($table_id)
+    {
+       return $this->query("SELECT * FROM orders WHERE table_id = :id", ["id" => $table_id]);
+    }
+
     public function getAllOrders(): array
     {
         return $this->get_all(0, 100);
