@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../services/reservation.service.php';
 require_once __DIR__ . '/../services/orders.service.php';
+require_once __DIR__ . '/../services/table.service.php';
 
 Flight::group('/reservations', function() {
 
@@ -81,6 +82,13 @@ Flight::group('/reservations', function() {
                 || $payload['table_id'] == NULL || $payload['order_id'] == NULL) {
                 Flight::halt(500, "Required parameters are missing!");
             }
+
+            $tables_service = new TableService();
+            $table = $tables_service->getTableById($payload['table_id']);
+            if($table['capacity'] < $payload['num_guests']) {
+                Flight::halt(400, "Table capacity is less then chosen number of guests.!");
+            }
+
             $reservation_service = new ReservationService();
             $order = $reservation_service->addReservation($payload);
             Flight::json($order, 200);
