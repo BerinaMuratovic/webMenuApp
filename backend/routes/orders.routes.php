@@ -4,17 +4,7 @@ require_once __DIR__ . '/../services/orders.service.php';
 
 Flight::group('/orders', function() {
 
-    /**
-     * @OA\GET(
-     *      path="/order/all",
-     *      tags={"orders"},
-     *      summary="Get all orders",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all orders"
-     *      )
-     * )
-     */
+
     Flight::route('GET /@order_id', function ($order_id) {
         if($order_id == NULL || $order_id == '') {
             Flight::halt(500, "Required parameters are missing!");
@@ -32,17 +22,6 @@ Flight::group('/orders', function() {
     });
 
 
-    /**
-     * @OA\Get(
-     *      path="/orders/all",
-     *      tags={"orders"},
-     *      summary="Get all orders",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all orders"
-     *      )
-     * )
-     */
     Flight::route('GET /', function () {
         try {
             $order_service = new OrdersService();
@@ -54,17 +33,7 @@ Flight::group('/orders', function() {
         }
     });
 
-    /**
-     * @OA\Post(
-     *      path="/orders",
-     *      tags={"orders"},
-     *      summary="add new orders",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all orders"
-     *      )
-     * )
-     */
+
     Flight::route('POST /', function () {
         try {
             $payload = Flight::request()->data->getData();
@@ -80,17 +49,6 @@ Flight::group('/orders', function() {
         }
     });
 
-    /**
-     * @OA\DELETE(
-     *      path="/order/all",
-     *      tags={"orders"},
-     *      summary="Get all orders",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all orders"
-     *      )
-     * )
-     */
     Flight::route('DELETE /@order_id', function ($order_id) {
         if($order_id == NULL || $order_id == '') {
             Flight::halt(500, "Required parameters are missing!");

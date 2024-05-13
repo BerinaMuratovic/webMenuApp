@@ -4,19 +4,8 @@ require_once __DIR__ . '/../services/reservation.service.php';
 require_once __DIR__ . '/../services/orders.service.php';
 require_once __DIR__ . '/../services/table.service.php';
 
-Flight::group('/reservations', function() {
 
-    /**
-     * @OA\Get(
-     *      path="/reservation",
-     *      tags={"reservations"},
-     *      summary="Get all reservations",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all reservations"
-     *      )
-     * )
-     */
+Flight::group('/reservations', function() {
     Flight::route('GET /', function () {
         try {
             $reservation_service = new ReservationService();
@@ -28,17 +17,7 @@ Flight::group('/reservations', function() {
         }
     });
 
-    /**
-     * @OA\GET(
-     *      path="/reservation/all",
-     *      tags={"reservations"},
-     *      summary="Get all reservations",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all reservations"
-     *      )
-     * )
-     */
+
     Flight::route('GET /@reservation_id', function ($reservation_id) {
         if($reservation_id == NULL || $reservation_id == '') {
             Flight::halt(500, "Required parameters are missing!");
@@ -64,17 +43,7 @@ Flight::group('/reservations', function() {
         Flight::json(['order_data' => $order_data, '$reservation_data' => $reservation_data, 'message' => " successfull"]);
     });
 
-    /**
-     * @OA\Post(
-     *      path="/reservations",
-     *      tags={"reservations"},
-     *      summary="add new reservation",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Add new reservation"
-     *      )
-     * )
-     */
+
     Flight::route('POST /', function () {
         try {
             $payload = Flight::request()->data->getData();
@@ -98,17 +67,7 @@ Flight::group('/reservations', function() {
         }
     });
 
-    /**
-     * @OA\DELETE(
-     *      path="/reservation/all",
-     *      tags={"reservations"},
-     *      summary="Get all reservations",
-     *      @OA\Response(
-     *           response=200,
-     *           description="Get all reservations"
-     *      )
-     * )
-     */
+
     Flight::route('DELETE /@reservation_id', function ($reservation_id) {
         if($reservation_id == NULL || $reservation_id == '') {
             Flight::halt(500, "Required parameters are missing!");
