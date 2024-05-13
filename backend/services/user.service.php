@@ -1,17 +1,16 @@
 <?php
-include_once 'dao/UserDAO.php';
+require_once dirname(__DIR__) . '/dao/UserDao.php';
 
 class UserService {
-    private $userDAO;
+    private UserDao $user_dao;
 
-    public function __construct($conn) {
-        $this->userDAO = new UserDAO($conn);
+    public function __construct() {
+        $this->user_dao = new UserDao();
     }
 
-    public function getAllUsers() {
-        return $this->userDAO->getAllUsers();
+    public function getAllUsers(): array {
+        return $this->user_dao->getAllUsers();
     }
 
-    // Other methods to interact with UserDAO
 }
 ?>
