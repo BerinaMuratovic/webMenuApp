@@ -14,5 +14,19 @@ class ReservationDao extends BaseDao
         return $this->get_all(0, 100);
     }
 
+    public function deleteReservationById($reservation_id)
+    {
+        $this->execute("DELETE FROM reservations WHERE id = :id", ["id" => $reservation_id]);
+    }
+    public function getReservationById($reservation_id)
+    {
+        return $this->get_by_id($reservation_id);
+    }
+
+    public function addReservation($reservation)
+    {
+        return $this->insert('reservations', $reservation);
+    }
+
 
 }

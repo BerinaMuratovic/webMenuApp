@@ -12,6 +12,17 @@ class ReservationService {
         return $this->reservation_dao->getAllReservations();
     }
 
+    public function deleteReservationById($reservation_id) {
+        return $this->reservation_dao->deleteReservationById($reservation_id);
+    }
+    public function getReservationById($reservation_id) {
+        return $this->reservation_dao->getReservationById($reservation_id);
+    }
+
+    public function addReservation($reservation)
+    {
+        return $this->reservation_dao->addReservation($reservation);
+    }
 }
 ?>
 
