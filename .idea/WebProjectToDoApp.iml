@@ -14,6 +14,8 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-ctype" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/zircote/swagger-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/firebase/php-jwt" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

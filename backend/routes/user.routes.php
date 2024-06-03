@@ -4,6 +4,47 @@ require_once __DIR__ . '/../services/user.service.php';
 
 Flight::group('/users', function() {
 
+
+    Flight::route('GET /', function () {
+        $body = Flight::request()->query;
+        $params = [
+            "start" => (int)$body['start'],
+            "search" => "",
+            "draw" => $body['draw'],
+            "limit" => (int)$body['length'],
+            "order_column" => $body['order'][0]['name'],
+            "order_direction" => $body['order'][0]['dir'],
+        ];
+
+        $user_service = new UserService();
+
+        $count = $user_service->count_users($params['search']);
+        $users = $user_service->get_users(
+            $params['start'],
+            $params['limit'],
+            $params['search'],
+            $params['order_column'],
+            $params['order_direction']
+        );
+
+        foreach ($users as $id => $user) {
+            $users[$id]['action'] = '<div class="btn-group" role="group" aria-label="Actions">' .
+                '<button type="button" class="btn btn-warning" onclick="UserService.open_edit_user_modal('. $user['id'] .')">Edit</button>' .
+                '<button type="button" class="btn btn-danger" onclick="UserService.delete_user('. $user['id'] .')">Delete</button>' .
+                '</div>';
+        }
+        Flight::json([
+            'draw' => $params['draw'],
+            'data' => $users,
+            'recordsFiltered' => $count['count'],
+            'recordsTotal' => $count['count'],
+            'end' => $count['count']
+        ], 200);
+    });
+
+
+
+
     /**
      * @OA\Get(
      *      path="/user/all",
