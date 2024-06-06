@@ -20,13 +20,34 @@ $sql_reservations = "CREATE TABLE IF NOT EXISTS reservations (
     reservation_date DATETIME NOT NULL,
     num_guests INT NOT NULL,
     table_id INT NOT NULL,
+
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (table_id) REFERENCES tables(table_id)
 )";
 
+
 if ($conn->query($sql_reservations) === FALSE) {
     echo "Error creating reservations table: " . $conn->error;
 }
+// Create orders table
+$sql_orders = "CREATE TABLE IF NOT EXISTS orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    drink_id INT NOT NULL,
+    
+    main_dish_id INT NOT NULL,
+    side_dish_id INT NOT NULL,
+
+    FOREIGN KEY (drink_id) REFERENCES drinks(drink_id),
+    FOREIGN KEY (main_dish_id) REFERENCES main_dish(main_dish_id),
+    FOREIGN KEY (side_dish_id) REFERENCES side_dish(side_dish_id)
+)";
+
+
+
+if ($conn->query($sql_reservations) === FALSE) {
+    echo "Error creating reservations table: " . $conn->error;
+}
+
 
 // Create main_dish table
 $sql_main_dish = "CREATE TABLE IF NOT EXISTS main_dish (
